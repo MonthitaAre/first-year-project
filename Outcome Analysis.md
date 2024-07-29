@@ -17,11 +17,11 @@ The MSE indicates that the average squared difference between the actual outcome
 
 A scatter plot of observed vs. predicted punishment severity reveals a significant spread of data points, suggesting that while the model can predict general trends, it struggles with precise predictions, especially for higher values. The dashed line in the plot represents the ideal scenario where predicted values match observed values exactly.
 
-#### Graph 1: Random Forest Regression: Observed vs. Predicted Punishment Severity
+![Random Forest Regression: Observed vs. Predicted Punishment Severity](observed_vs_predicted.PNG)
 
 To understand each feature's contribution to the prediction of punishment severity, I used SHAP (SHapley Additive exPlanations) values. The SHAP summary plot illustrates the impact of different features, including the presence of a stable working group. This plot shows that stable working groups significantly influence punishment severity. Each dot represents a SHAP value for a feature in a particular instance, indicating how much that feature influenced the prediction.
 
-#### Graph 2: SHAP Value (Impact on Model Output)
+![SHAP Value (Impact on Model Output)](shap_values.PNG)
 
 In addition to regression analysis, I employed a Random Forest classifier to predict judicial outcomes (guilty or not guilty) based on the same set of features. Here are the detailed results and their interpretations:
 
