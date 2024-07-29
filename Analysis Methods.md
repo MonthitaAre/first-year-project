@@ -1,0 +1,15 @@
+## Analysis Methods
+
+In this analysis, I employed a variety of machine learning models to investigate the effect of stable working groups on court outcomes and the severity of punishment. The goal was to provide a thorough and interpretable assessment of the influence of these groups by using Random Forest models for regression and classification tasks, as well as SMOTE for class imbalance and SHAP for feature importance analysis.
+
+### Random Forest Regressor
+
+To forecast punishment severity, I used a Random Forest Regressor. This powerful ensemble learning method combines numerous decision trees to produce more accurate and consistent predictions. I used GridSearchCV to tune the model's hyperparameters and evaluated its performance using metrics such as Mean Squared Error (MSE), R-squared, and Mean Absolute Error (MAE). Random Forest Regression was chosen for its capacity to handle complicated inter-variable interactions as well as its resistance to overfitting, allowing for insights into feature relevance and the impact of stable working groups on punishment harshness. I expected to find significant predictors of punishment severity, with stable working groups potentially contributing to harsher or more lenient sentencing.
+
+### Random Forest Classifier
+
+For predicting judicial outcomes (guilty or not guilty), I used a Random Forest Classifier. This ensemble learning method combines multiple decision trees to improve classification accuracy. To handle class imbalance, I applied SMOTE (Synthetic Minority Over-sampling Technique), ensuring the model performs well even when data is skewed. Hyperparameter tuning was conducted using GridSearchCV, and I evaluated the model's performance using precision, recall, F1-score, and ROC-AUC. Precision measures the proportion of true positive predictions among all positive predictions, recall measures the proportion of true positives identified among all actual positives, F1-score is the harmonic mean of precision and recall, and ROC-AUC (Receiver Operating Characteristic - Area Under Curve) measures the overall ability of the model to distinguish between classes. I anticipated finding significant predictors of judicial outcomes, with stable working groups possibly increasing the likelihood of guilty verdicts.
+
+### SHAP (SHapley Additive exPlanations) Values
+
+To interpret the contribution of each feature to the model's predictions and understand the impact of stable working groups, I used SHAP values. SHAP provides a unified measure of feature importance, with summary plots visualizing the impact of different features on the model's output. This analysis was chosen for its ability to provide clear and consistent explanations for model predictions, helping me understand the influence of each feature, particularly the presence of stable working groups, on both punishment severity and judicial outcomes. The SHAP analysis was expected to highlight the relative importance of stable working groups compared to other features, offering insights into how these groups affect judicial decisions and sentencing.
